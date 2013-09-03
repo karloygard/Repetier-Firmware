@@ -1302,7 +1302,6 @@ STEPPER_CURRENT_CONTROL
 /*****************************************************************
 * RAMBo Pin Assignments
 ******************************************************************/
-
 #ifndef __AVR_ATmega2560__
 #error Oops!  Make sure you have 'Arduino Mega 2560' selected from the 'Tools -> Boards' menu.
 #endif
@@ -1337,11 +1336,12 @@ STEPPER_CURRENT_CONTROL
 #define HEATER_0_PIN   9
 #define TEMP_0_PIN     0
 
-#define HEATER_1_PIN   3
-#define TEMP_1_PIN     2
+#define HEATER_1_PIN   -1 //7
+#define TEMP_1_PIN      1
 
-#define HEATER_2_PIN   7
-#define TEMP_2_PIN     1
+
+#define HEATER_2_PIN   -1
+#define TEMP_2_PIN     -1
 
 #define E0_STEP_PIN    34
 #define E0_DIR_PIN     43
@@ -1362,8 +1362,9 @@ STEPPER_CURRENT_CONTROL
 #define SDSS           53
 #define LED_PIN        13
 #define FAN_PIN        8
+#define FAN2_PIN       6
 #define PS_ON_PIN      4
-#define KILL_PIN       -1
+#define KILL_PIN       80
 #define SUICIDE_PIN    -1  //PIN that has to be turned on right after start, to keep power flowing.
 
 #define E0_PINS E0_STEP_PIN,E0_DIR_PIN,E0_ENABLE_PIN,E0_MS1_PIN,E0_MS2_PIN,
